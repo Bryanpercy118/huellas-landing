@@ -1,8 +1,8 @@
 /* Asegurar que el canvas ocupe el espacio adecuado */
 canvas {
   display: block;
-  width: 50vw;  /* 50% del viewport width */
-  height: 80vh; /* 80% del viewport height */
+  width: 10vw;  /* 50% del viewport width */
+  height: 100vh; /* 80% del viewport height */
   margin-left: 20%;
   margin-top: 10%;
  

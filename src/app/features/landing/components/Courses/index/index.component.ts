@@ -57,12 +57,12 @@ export class IndexComponent implements OnInit, AfterViewInit {
 
   private loadModel(): void {
     const loader = new GLTFLoader();
-    loader.load('/assets/images/acordeon.gltf', (gltf) => {
+    loader.load('/assets/images/ac.gltf', (gltf) => {
       this.model = gltf.scene;
 
       // Rotar el modelo para que quede de frente
       this.model.rotation.x = 0;
-      this.model.rotation.y = 5;  // Rotar 90 grados en el eje Y
+      this.model.rotation.y = 5.1;  // Rotar 90 grados en el eje Y
       this.model.rotation.z = 0;
 
       // Escalar y posicionar el modelo
