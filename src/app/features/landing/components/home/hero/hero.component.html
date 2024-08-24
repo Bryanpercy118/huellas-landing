@@ -1,4 +1,5 @@
-<section class="relative h-[70vh] flex flex-col items-center justify-center text-center text-white">
+<!-- Hero Section -->
+<section class="relative h-[70vh] flex flex-col items-center justify-center text-center text-white" id="home">
     <div class="video-docker absolute top-0 left-0 w-full h-[70vh] overflow-hidden">
         <!-- YouTube Video Embed -->
         <iframe class="min-w-full min-h-full absolute object-cover" 
@@ -6,12 +7,17 @@
             frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
         </iframe>
     </div>
-    <div class="video-content space-y-2 z-10">
-        <h1 class="font-light text-6xl">Aprende a tocar el acordeon</h1>
-        <h3 class="font-light text-3xl">Huellas del Maestro Plataforma Virtual</h3>
+    <div class="video-content space-y-2 z-10 flex flex-col md:flex-row items-center justify-center">
+        <div class="md:w-1/2 mb-4 md:mb-0">
+            <h1 class="text-white font-medium text-4xl md:text-5xl leading-tight mb-2">Aprende a tocar el acordeón</h1>
+            <p class="font-regular text-xl mb-8 mt-4">Huellas del Maestro Plataforma Virtual</p>
+            <a href="#contactUs"
+                class="px-6 py-3 bg-[#c8a876] text-white font-medium rounded-full hover:bg-[#c09858] transition duration-200">Contact Us</a>
+        </div>
     </div>
 </section>
 
+<!-- Styles -->
 <style>
     .video-docker iframe {
         top: 50%;
@@ -28,5 +34,26 @@
         left: 0;
         background: rgba(0, 0, 0, 0.6);
         z-index: 1;
+    }
+
+    /* Custom styles for the text and button */
+    #home h1 {
+        color: #ffffff;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    #home p {
+        color: #ffffff;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    #home a {
+        background-color: #c8a876;
+        border: none;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    #home a:hover {
+        background-color: #c09858;
     }
 </style>
