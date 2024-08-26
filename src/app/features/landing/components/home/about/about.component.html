@@ -63,16 +63,9 @@
                 </div>
                 <div class="flex justify-center md:justify-end space-x-4">
                     <!-- Botón con icono de ojo -->
-                    <button (click)="openPopup()" class="flex items-center text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 font-semibold py-2 px-4 rounded-lg shadow">
-                        👁️
-                        Ver Video
+                    <button (click)="openPopup()" class="text-white bg-[#c8a876] hover:bg-blue-900 transition-colors duration-300 font-semibold py-2 px-4 rounded-lg shadow">
+                        Conoce nuestro simulador de acordeón
                     </button>
-                    <!-- Botón de simulador -->
-                    <a href="https://simulador-acordeon.vercel.app/" target="_blank" rel="noopener noreferrer">
-                        <button class="text-white bg-[#c8a876] hover:bg-blue-900 transition-colors duration-300 font-semibold py-2 px-4 rounded-lg shadow">
-                            Conoce nuestro simulador de acordeón
-                        </button>
-                    </a>
                 </div>
             </div>
         </div>
@@ -126,7 +119,7 @@
 <div *ngIf="isPopupOpen" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
     <div class="bg-white rounded-lg overflow-hidden max-w-3xl w-full">
         <div class="flex justify-between items-center p-4 bg-blue-600 text-white">
-            <h3 class="text-lg font-semibold">Aprende con Nuestro Simulador de Acordeon</h3>
+            <h3 class="text-lg font-semibold">🕒 Aprende en 48 Hrs</h3>
             <button (click)="closePopup()" class="text-white hover:text-gray-200">
                 &#10005;
             </button>
