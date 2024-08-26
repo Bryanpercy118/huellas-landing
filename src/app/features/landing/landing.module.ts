@@ -7,6 +7,7 @@ import { NewsComponent } from './components/home/news/news.component';
 import { TestimonialsComponent } from './components/home/testimonials/testimonials.component';
 import { PricingComponent } from './components/home/pricing/pricing.component';
 import { LandingRoutingModule } from './landing-routing.module';
+import { CoursesModule } from './components/Courses/courses.module';
 
 
 
@@ -21,7 +22,9 @@ import { LandingRoutingModule } from './landing-routing.module';
   ],
   imports: [
     CommonModule,
-    LandingRoutingModule
+    LandingRoutingModule,
+    CoursesModule
+    
   ]
 })
 export class LandingModule { }

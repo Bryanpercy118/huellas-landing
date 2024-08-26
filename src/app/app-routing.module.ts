@@ -7,8 +7,8 @@ const routes: Routes = [
     path: 'Huellas-del-Maestro',
     loadChildren: () => import('../app/features/landing/landing.module').then(m => m.LandingModule)
   },
-  { path: 'courses', component: IndexComponent },
-  { path: '', redirectTo: '/Huellas-del-Maestro', pathMatch: 'full' },
+  
+  { path: '', redirectTo: '/Huellas-del-Maestro/home', pathMatch: 'full' },
 ];
 
 @NgModule({

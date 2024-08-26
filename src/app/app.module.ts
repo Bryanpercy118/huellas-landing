@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './features/landing/components/home/header/header.component';
 import { FooterComponent } from './features/landing/components/home/footer/footer.component';
 import { LandingModule } from './features/landing/landing.module';
-import { CoursesModule } from './features/landing/components/Courses/courses.module';
 
 
 @NgModule({
@@ -18,8 +17,7 @@ import { CoursesModule } from './features/landing/components/Courses/courses.mod
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LandingModule,
-    CoursesModule
+    LandingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
