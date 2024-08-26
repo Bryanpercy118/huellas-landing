@@ -6,23 +6,23 @@ import { Component, AfterViewInit, ViewChild, ElementRef, OnInit } from '@angula
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit, AfterViewInit {
-  ngOnInit(): void {
-    
-  }
-
+  
   @ViewChild('heroVideo') heroVideo!: ElementRef<HTMLVideoElement>;
+
+  ngOnInit(): void {
+    // Aquí puedes agregar lógica adicional que necesites en la inicialización del componente
+  }
 
   ngAfterViewInit(): void {
     const video = this.heroVideo.nativeElement;
 
-    // Set the volume to a lower level
-    video.volume = 0.2; // Volume at 20% of the maximum
+    // Establecer el volumen en un nivel más bajo
+    video.volume = 0.2; // Volumen al 20% del máximo
 
-    // Ensure the video loops correctly on mobile devices
+    // Asegurar que el video se repita correctamente en dispositivos móviles
     video.addEventListener('ended', () => {
       video.currentTime = 0;
       video.play();
     });
   }
-  
 }
