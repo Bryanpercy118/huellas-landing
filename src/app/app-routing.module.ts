@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingPageComponent } from './features/landing/components/home/landing-page/landing-page.component';
 import { IndexComponent } from './features/landing/components/Courses/index/index.component';
 
-
 const routes: Routes = [
-  {path: '', redirectTo: '/landing', pathMatch:'full'},
-  {path: 'landing', component: LandingPageComponent},
-  {path:'courses', component: IndexComponent},
+  {
+    path: 'Huellas-del-Maestro',
+    loadChildren: () => import('../app/features/landing/landing.module').then(m => m.LandingModule)
+  },
+  { path: 'courses', component: IndexComponent },
+  { path: '', redirectTo: '/Huellas-del-Maestro', pathMatch: 'full' },
 ];
 
 @NgModule({

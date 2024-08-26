@@ -6,6 +6,7 @@ import { AboutComponent } from './components/home/about/about.component';
 import { NewsComponent } from './components/home/news/news.component';
 import { TestimonialsComponent } from './components/home/testimonials/testimonials.component';
 import { PricingComponent } from './components/home/pricing/pricing.component';
+import { LandingRoutingModule } from './landing-routing.module';
 
 
 
@@ -19,7 +20,8 @@ import { PricingComponent } from './components/home/pricing/pricing.component';
     TestimonialsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    LandingRoutingModule
   ]
 })
 export class LandingModule { }
