@@ -1,13 +1,17 @@
 <!-- nav bar section -->
 <nav class="flex flex-wrap items-center justify-between p-3 bg-[#e8e8e5]">
     <img class="ml-4" src="https://huellasdelmaestro.com/wp-content/uploads/2022/06/logo-1.png" width="150" height="150" alt="">
+    
+    <!-- Botón de menú hamburguesa para dispositivos móviles -->
     <div class="flex md:hidden">
-        <button id="hamburger">
-          <img class="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" />
-          <img class="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" />
+        <button (click)="toggleMenu()">
+          <img *ngIf="!isMenuOpen" class="block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" />
+          <img *ngIf="isMenuOpen" class="block" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" />
         </button>
     </div>
-    <div class="toggle hidden w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 md:border-none">
+
+    <!-- Menú de navegación -->
+    <div [ngClass]="{'hidden': !isMenuOpen, 'flex': isMenuOpen, 'md:flex': true}" class="w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 md:border-none">
         <a routerLink="/Huellas-del-Maestro/home" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Inicio</a>
         <a routerLink="/Huellas-del-Maestro/courses" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Cursos</a>
         <a routerLink="/Huellas-del-Maestro/tienda" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Tienda</a>
@@ -16,8 +20,9 @@
         <a routerLink="/Huellas-del-Maestro/fundacion" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Fundación</a>
         <a routerLink="/Huellas-del-Maestro/museo" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Museo</a>
     </div>
-  
-    <div class="toggle w-full text-end hidden md:flex md:w-auto px-2 py-2 md:rounded">
+
+    <!-- Botón de llamar -->
+    <div [ngClass]="{'hidden': !isMenuOpen, 'flex': isMenuOpen, 'md:flex': true}" class="w-full text-end md:w-auto px-2 py-2 md:rounded">
         <a href="tel:+123">
             <div class="flex justify-end">
                 <div class="flex items-center h-10 w-30 rounded-md bg-[#c8a876] text-white font-medium p-2">
@@ -32,5 +37,4 @@
             </div>
         </a>
     </div>
-  </nav>
-  
+</nav>

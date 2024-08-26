@@ -7,7 +7,7 @@ import { IndexComponent } from './components/Courses/index/index.component';
 const routes: Routes = [
   { path: 'home', title: 'Huellas del Maestro', component: LandingPageComponent },
   { path: 'courses', title: 'Cursos', component: IndexComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' }  // Ruta por defecto dentro de este módulo
+  { path: '', redirectTo: 'home', pathMatch: 'full', }  // Ruta por defecto dentro de este módulo
 ];
 
 @NgModule({
