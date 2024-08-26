@@ -53,20 +53,27 @@
 <!-- our services section -->
 <section class="py-10" id="services">
     <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-            <div>
-                <h2 class="my-8 text-2xl font-bold text-black md:text-4xl">¿Por qué aprender con nosotros?</h2>
-                <p class="text-black ">
-                    En <span class="font-semibold text-blue-600">Huellas del Maestro</span>, no solo aprendes a tocar el acordeón, te sumerges en la rica cultura Vallenata, guiado por los mejores expertos. Nuestro enfoque único combina tradición con tecnología, permitiéndote aprender a tu propio ritmo y con la flexibilidad que necesitas.
-                </p>
-            </div>
-            <div class="flex justify-center md:justify-end">
-                <a href="https://simulador-acordeon.vercel.app/" target="_blank" rel="noopener noreferrer">
-                    <button class="text-white bg-[#c8a876] hover:bg-blue-900 transition-colors duration-300 font-semibold py-2 px-4 rounded-lg shadow">
-                        Conoce nuestro simulador de acordeón
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                <div>
+                    <h2 class="my-8 text-2xl font-bold text-black md:text-4xl">¿Por qué aprender con nosotros?</h2>
+                    <p class="text-black">
+                        En <span class="font-semibold text-blue-600">Huellas del Maestro</span>, no solo aprendes a tocar el acordeón, te sumerges en la rica cultura Vallenata, guiado por los mejores expertos. Nuestro enfoque único combina tradición con tecnología, permitiéndote aprender a tu propio ritmo y con la flexibilidad que necesitas.
+                    </p>
+                </div>
+                <div class="flex justify-center md:justify-end space-x-4">
+                    <!-- Botón con icono de ojo -->
+                    <button (click)="openPopup()" class="flex items-center text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 font-semibold py-2 px-4 rounded-lg shadow">
+                        👁️
+                        Ver Video
                     </button>
-                </a>
-                
+                    <!-- Botón de simulador -->
+                    <a href="https://simulador-acordeon.vercel.app/" target="_blank" rel="noopener noreferrer">
+                        <button class="text-white bg-[#c8a876] hover:bg-blue-900 transition-colors duration-300 font-semibold py-2 px-4 rounded-lg shadow">
+                            Conoce nuestro simulador de acordeón
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
@@ -115,3 +122,22 @@
     </div>
 </div>
 
+<!-- Popup Video -->
+<div *ngIf="isPopupOpen" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg overflow-hidden max-w-3xl w-full">
+        <div class="flex justify-between items-center p-4 bg-blue-600 text-white">
+            <h3 class="text-lg font-semibold">Aprende con Nuestro Simulador de Acordeon</h3>
+            <button (click)="closePopup()" class="text-white hover:text-gray-200">
+                &#10005;
+            </button>
+        </div>
+        <div class="p-4">
+            <!-- Vimeo Video Embed -->
+            <iframe 
+                class="w-full h-64 md:h-96" 
+                src="https://player.vimeo.com/video/907577960?autoplay=1&amp;playsinline=1&amp;color&amp;autopause=0&amp;loop=0&amp;muted=0&amp;title=0&amp;portrait=1&amp;byline=0#t=0s" 
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
