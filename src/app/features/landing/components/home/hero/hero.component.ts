@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
@@ -6,15 +6,23 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit, AfterViewInit {
-  constructor() { }
-
   ngOnInit(): void {
+    
   }
+
+  @ViewChild('heroVideo') heroVideo!: ElementRef<HTMLVideoElement>;
 
   ngAfterViewInit(): void {
-    const video = document.getElementById('backgroundVideo') as HTMLVideoElement;
-    if (video) {
-      video.volume = 0.2; // Ajusta el volumen al 20%
-    }
+    const video = this.heroVideo.nativeElement;
+
+    // Set the volume to a lower level
+    video.volume = 0.2; // Volume at 20% of the maximum
+
+    // Ensure the video loops correctly on mobile devices
+    video.addEventListener('ended', () => {
+      video.currentTime = 0;
+      video.play();
+    });
   }
+  
 }
