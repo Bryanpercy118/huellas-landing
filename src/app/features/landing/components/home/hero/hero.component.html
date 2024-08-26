@@ -1,21 +1,18 @@
-<section class="relative h-[70vh] flex flex-col items-center justify-center text-center text-white" id="home">
-    <div class="video-docker absolute top-0 left-0 w-full h-[70vh] overflow-hidden">
+<section class="relative h-[50vh] md:h-[70vh] flex flex-col items-center justify-center text-center text-white" id="home">
+    <div class="video-docker absolute top-0 left-0 w-full h-[50vh] md:h-[70vh] overflow-hidden">
         <!-- Video Embed -->
-        <video #heroVideo class="min-w-full min-h-full absolute object-cover" autoplay loop muted playsinline>
+        <video #heroVideo class="w-full h-full absolute object-cover" autoplay loop muted playsinline>
             <source src="assets/video/hero.mp4" type="video/mp4">
             Tu navegador no soporta la reproducción de videos HTML5.
         </video>
     </div>
-    <div class="video-content space-y-2 z-10 flex flex-col md:flex-row items-center justify-center">
-        <div class="md:w-1/2 mb-4 md:mb-0">
-            <h1 class="text-white font-medium text-4xl md:text-5xl leading-tight mb-2">Aprende a tocar el acordeón</h1>
-            <p class="font-regular text-xl mb-8 mt-4">Huellas del Maestro Plataforma Virtual</p>
-            <a href="#contactUs"
-                class="px-6 py-3 bg-[#c8a876] text-white font-medium rounded-full hover:bg-[#c09858] transition duration-200">Inscríbete</a>
-        </div>
+    <div class="video-content space-y-2 z-10 flex flex-col items-center justify-center px-4">
+        <h1 class="text-white font-medium text-3xl md:text-5xl leading-tight mb-2">Aprende a tocar el acordeón</h1>
+        <p class="font-regular text-lg md:text-xl mb-8 mt-4">Huellas del Maestro Plataforma Virtual</p>
+        <a href="#contactUs"
+            class="px-6 py-3 bg-[#c8a876] text-white font-medium rounded-full hover:bg-[#c09858] transition duration-200">Inscríbete</a>
     </div>
 </section>
-
 
 <!-- Styles -->
 <style>
