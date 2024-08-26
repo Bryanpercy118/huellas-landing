@@ -1,5 +1,5 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, HostListener, OnInit, OnDestroy } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component, AfterViewInit, ViewChild, ElementRef, OnInit, OnDestroy } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
@@ -8,18 +8,21 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('heroVideo') heroVideo!: ElementRef<HTMLVideoElement>;
-  private currentUrl: string = '';
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.currentUrl = this.router.url;
-
+    const video = this.heroVideo.nativeElement;
+    video.pause(); // Pausa el video primero
+    video.currentTime = 0; // Reinicia el video desde el inicio
+    video.play(); // Reproduce el video
     document.addEventListener('visibilitychange', this.handleVisibilityChange.bind(this));
 
     // Detecta cambios en la ruta
-    this.router.events.subscribe(() => {
-      this.checkAndPlayVideo();
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.checkAndPlayVideo();
+      }
     });
   }
 
@@ -35,9 +38,11 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
     const video = this.heroVideo.nativeElement;
 
     if (this.isCurrentRouteVisible() && !document.hidden) {
-      video.play();
+      video.pause(); // Pausa el video primero
+      video.currentTime = 0; // Reinicia el video desde el inicio
+      video.play(); // Reproduce el video
     } else {
-      video.pause();
+      video.pause(); // Pausa el video si la ruta no es visible o la pestaña no está activa
     }
   }
 
