@@ -12,6 +12,10 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
+    this.initializedVideo(); 
+  }
+  
+  initializedVideo(): void {
     const video = this.heroVideo.nativeElement;
     video.pause(); // Pausa el video primero
     video.currentTime = 0; // Reinicia el video desde el inicio
@@ -40,11 +44,13 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.isCurrentRouteVisible() && !document.hidden) {
       video.pause(); // Pausa el video primero
       video.currentTime = 0; // Reinicia el video desde el inicio
+      video.volume = 0.2; // Ajusta el volumen a un nivel bajo (20% del máximo)
       video.play(); // Reproduce el video
     } else {
       video.pause(); // Pausa el video si la ruta no es visible o la pestaña no está activa
     }
-  }
+}
+
 
   isCurrentRouteVisible(): boolean {
     return this.router.url === '/Huellas-del-Maestro/home';

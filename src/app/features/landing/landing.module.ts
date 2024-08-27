@@ -8,6 +8,7 @@ import { TestimonialsComponent } from './components/home/testimonials/testimonia
 import { PricingComponent } from './components/home/pricing/pricing.component';
 import { LandingRoutingModule } from './landing-routing.module';
 import { CoursesModule } from './components/Courses/courses.module';
+import { UsComponent } from './components/Us/us/us.component';
 
 
 
@@ -18,7 +19,8 @@ import { CoursesModule } from './components/Courses/courses.module';
     AboutComponent,
     NewsComponent,
     PricingComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
+    UsComponent
   ],
   imports: [
     CommonModule,
