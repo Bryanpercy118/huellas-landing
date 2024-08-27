@@ -2,14 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>HuellasLanding</title>
+  <title>Huellas del Maestro</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="https://www.youtube.com/iframe_api"></script>
-
+  <link rel="icon" type="image/x-icon" href="./assets/logo.png">
+  <style>
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999; 
+    }
+    
+    .whatsapp-icon img {
+      width: 55px;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
   <app-root></app-root>
+  <a href="https://api.whatsapp.com/send/?phone=573164987035&text=Hola%2C%20estoy%20interesado%20de%20en%20sus%20servicios.&app_absent=0" class="whatsapp-icon" target="_blank">
+    <img src="assets/social.png" alt="WhatsApp">
+  </a>
 </body>
 </html>
