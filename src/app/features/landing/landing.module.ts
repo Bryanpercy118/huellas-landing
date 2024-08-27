@@ -9,7 +9,8 @@ import { PricingComponent } from './components/home/pricing/pricing.component';
 import { LandingRoutingModule } from './landing-routing.module';
 import { CoursesModule } from './components/Courses/courses.module';
 import { UsComponent } from './components/Us/us/us.component';
-
+import { CountUpModule } from 'ngx-countup';
+import { ContactsComponent } from './components/Contact/contacts/contacts.component';
 
 
 @NgModule({
@@ -20,12 +21,14 @@ import { UsComponent } from './components/Us/us/us.component';
     NewsComponent,
     PricingComponent,
     TestimonialsComponent,
-    UsComponent
+    UsComponent,
+    ContactsComponent
   ],
   imports: [
     CommonModule,
     LandingRoutingModule,
-    CoursesModule
+    CoursesModule,
+    CountUpModule
     
   ]
 })
