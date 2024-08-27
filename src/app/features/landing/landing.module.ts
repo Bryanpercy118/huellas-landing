@@ -11,6 +11,7 @@ import { CoursesModule } from './components/Courses/courses.module';
 import { UsComponent } from './components/Us/us/us.component';
 import { CountUpModule } from 'ngx-countup';
 import { ContactsComponent } from './components/Contact/contacts/contacts.component';
+import { FundationComponent } from './components/Fundacion/fundation/fundation.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ContactsComponent } from './components/Contact/contacts/contacts.compon
     PricingComponent,
     TestimonialsComponent,
     UsComponent,
-    ContactsComponent
+    ContactsComponent,
+    FundationComponent
   ],
   imports: [
     CommonModule,
