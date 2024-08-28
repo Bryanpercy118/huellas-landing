@@ -10,6 +10,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 export class MuseoComponent implements OnInit, AfterViewInit {
 
   @ViewChild('videoRef') videoElement!: ElementRef<HTMLVideoElement>;
+  private mixer: THREE.AnimationMixer | undefined;
 
   constructor(private elRef: ElementRef) {}
 
@@ -32,23 +33,38 @@ export class MuseoComponent implements OnInit, AfterViewInit {
     renderer.setSize(container.clientWidth, container.clientHeight);
     container.appendChild(renderer.domElement);
 
-    // Cargar el modelo GLTF
+    // Cargar el modelo GLTF con la animación
     const loader = new GLTFLoader();
     loader.load('assets/images/acordeon.gltf', (gltf) => {
-      scene.add(gltf.scene);
+      const model = gltf.scene;
+      scene.add(model);
+
+      // Configurar AnimationMixer y reproducir las animaciones
+      this.mixer = new THREE.AnimationMixer(model);
+      gltf.animations.forEach((clip) => {
+        this.mixer?.clipAction(clip).play();
+      });
+
       animate();
     }, undefined, (error) => {
-      console.error(error);
+      console.error('Error al cargar el modelo GLTF:', error);
     });
 
     camera.position.z = 5;
 
-    function animate() {
+    const animate = () => {
       requestAnimationFrame(animate);
+
+      // Actualizar las animaciones
+      if (this.mixer) {
+        const delta = new THREE.Clock().getDelta();
+        this.mixer.update(delta);
+      }
+
       renderer.render(scene, camera);
-    }
+    };
   }
-  
+
   playVideo(): void {
     const video: HTMLVideoElement = this.videoElement.nativeElement;
     
