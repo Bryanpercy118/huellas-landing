@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './features/landing/components/home/header/header.component';
 import { FooterComponent } from './features/landing/components/home/footer/footer.component';
 import { LandingModule } from './features/landing/landing.module';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from '../enviroments/environment';
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { LandingModule } from './features/landing/landing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LandingModule
+    LandingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
