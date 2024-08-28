@@ -13,6 +13,7 @@ import { CountUpModule } from 'ngx-countup';
 import { ContactsComponent } from './components/Contact/contacts/contacts.component';
 import { FundationComponent } from './components/Fundacion/fundation/fundation.component';
 import { MuseoComponent } from './components/Museo/museo/museo.component';
+import { AcordeonModelComponent } from './components/Museo/components/acordeon-model/acordeon-model.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { MuseoComponent } from './components/Museo/museo/museo.component';
     UsComponent,
     ContactsComponent,
     FundationComponent,
-    MuseoComponent
+    MuseoComponent,
+    AcordeonModelComponent
   ],
   imports: [
     CommonModule,

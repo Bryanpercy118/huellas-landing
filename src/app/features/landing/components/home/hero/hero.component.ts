@@ -16,6 +16,7 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   
   initializedVideo(): void {
+   
     const video = this.heroVideo.nativeElement;
     video.pause(); // Pausa el video primero
     video.currentTime = 0; // Reinicia el video desde el inicio
