@@ -1,33 +1,32 @@
 <!-- nav bar section -->
 <nav class="flex flex-wrap items-center justify-between p-3 bg-[#e8e8e5]">
-    <img class="ml-4" src="https://huellasdelmaestro.com/wp-content/uploads/2022/06/logo-1.png" width="150" height="150" alt="">
+    <img class="ml-4" src="https://huellasdelmaestro.com/wp-content/uploads/2022/06/logo-1.png" width="150" height="150" alt="Logo Huellas del Maestro">
     
     <!-- Botón de menú hamburguesa para dispositivos móviles -->
     <div class="flex md:hidden">
         <button (click)="toggleMenu()">
-          <img *ngIf="!isMenuOpen" class="block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" />
-          <img *ngIf="isMenuOpen" class="block" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" />
+          <img *ngIf="!isMenuOpen" class="block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" alt="Abrir menú" />
+          <img *ngIf="isMenuOpen" class="block" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" alt="Cerrar menú" />
         </button>
     </div>
 
     <!-- Menú de navegación -->
-    <div [ngClass]="{'hidden': !isMenuOpen, 'flex': isMenuOpen, 'md:flex': true}" class="w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 md:border-none">
-        <a routerLink="/Huellas-del-Maestro/home" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Inicio</a>
-        <a routerLink="/Huellas-del-Maestro/courses" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Cursos</a>
-        <a routerLink="/Huellas-del-Maestro/tienda" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Tienda</a>
-        <a routerLink="/Huellas-del-Maestro/us" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Nosotros</a>
-        <a routerLink="/Huellas-del-Maestro/contacts" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Contacto</a>
-        <a routerLink="/Huellas-del-Maestro/fundation" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Fundación</a>
-        <a routerLink="/Huellas-del-Maestro/museum" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Museo</a>
+    <div [ngClass]="{'hidden': !isMenuOpen, 'flex': isMenuOpen, 'md:flex': true}" class="w-full md:w-auto md:flex flex-col md:flex-row items-center text-center md:text-right mt-5 md:mt-0 space-y-4 md:space-y-0 md:space-x-4">
+        <a routerLink="/Huellas-del-Maestro/home" class="block md:inline-block hover:text-blue-500 px-3 py-2">Inicio</a>
+        <a routerLink="/Huellas-del-Maestro/courses" class="block md:inline-block hover:text-blue-500 px-3 py-2">Cursos</a>
+        <a routerLink="/Huellas-del-Maestro/tienda" class="block md:inline-block hover:text-blue-500 px-3 py-2">Tienda</a>
+        <a routerLink="/Huellas-del-Maestro/us" class="block md:inline-block hover:text-blue-500 px-3 py-2">Nosotros</a>
+        <a routerLink="/Huellas-del-Maestro/contacts" class="block md:inline-block hover:text-blue-500 px-3 py-2">Contacto</a>
+        <a routerLink="/Huellas-del-Maestro/fundation" class="block md:inline-block hover:text-blue-500 px-3 py-2">Fundación</a>
+        <a routerLink="/Huellas-del-Maestro/museum" class="block md:inline-block hover:text-blue-500 px-3 py-2">Museo</a>
     </div>
 
-    
     <!-- Botón de llamar -->
-    <div [ngClass]="{'hidden': !isMenuOpen, 'flex': isMenuOpen, 'md:flex': true}" class="w-full text-end md:w-auto px-2 py-2 md:rounded">
-        <a href="tel:+123">
-            <div class="flex justify-end">
-                <div class="flex items-center h-10 w-30 rounded-md bg-[#c8a876] text-white font-medium p-2">
-                    <!-- Heroicon name: phone -->
+    <div [ngClass]="{'hidden': !isMenuOpen, 'flex': isMenuOpen, 'md:flex': true}" class="w-full md:w-auto px-2 py-2 md:rounded">
+        <a href="tel:+123" class="block text-right md:inline-block">
+            <div class="flex justify-center md:justify-end">
+                <div class="flex items-center h-10 w-auto rounded-md bg-[#c8a876] text-white font-medium p-2">
+                    <!-- Icono de teléfono -->
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6 mr-2">
                         <path stroke-linecap="round" stroke-linejoin="round"
