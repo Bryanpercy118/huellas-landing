@@ -9,6 +9,10 @@ const routes: Routes = [
     path: 'Huellas-del-Maestro',
     loadChildren: () => import('../app/features/landing/landing.module').then(m => m.LandingModule)
   },
+  {
+    path: 'Platform',
+    loadChildren: () => import('../app/features/platform/platform.module').then(m => m.PlatformModule)
+  },
   
 ];
 

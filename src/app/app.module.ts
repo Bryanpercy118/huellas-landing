@@ -9,6 +9,7 @@ import { LandingModule } from './features/landing/landing.module';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from '../enviroments/environment';
+import { PlatformModule } from './features/platform/platform.module';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { environment } from '../enviroments/environment';
     BrowserModule,
     AppRoutingModule,
     LandingModule,
+    PlatformModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     
