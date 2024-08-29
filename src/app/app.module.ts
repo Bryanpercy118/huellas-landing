@@ -29,7 +29,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
     
   ],
   providers: [
-    provideFirebaseApp(() => initializeApp({"projectId":"huellasdelmaestro-6cd9d","appId":"1:388946467613:web:14a2ea596db0bb8e2e1ff4","storageBucket":"huellasdelmaestro-6cd9d.appspot.com","apiKey":"AIzaSyBclSxE15myzQMUBBtCfgGf48UG-AI79ts","authDomain":"huellasdelmaestro-6cd9d.firebaseapp.com","messagingSenderId":"388946467613","measurementId":"G-GBWFBHHDQW"})),
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore())
   ],
