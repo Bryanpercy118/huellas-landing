@@ -12,6 +12,7 @@ import { PlatformModule } from './features/platform/platform.module';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
     AppRoutingModule,
     LandingModule,
     PlatformModule,
+    FormsModule
    
     
   ],
