@@ -9,7 +9,7 @@ export class AuthService {
 
     constructor(private fireauth: Auth, private router: Router) {}
 
-    // Método para iniciar sesión con correo y contraseña
+    // Login
     login(email: string, password: string) {
         signInWithEmailAndPassword(this.fireauth, email, password)
             .then((userCredential) => {
@@ -23,7 +23,7 @@ export class AuthService {
             });
     }
 
-    // Método para registrar un nuevo usuario
+    // Register
     register(email: string, password: string) {
         createUserWithEmailAndPassword(this.fireauth, email, password)
             .then((userCredential) => {
@@ -51,7 +51,7 @@ export class AuthService {
           });
       }
 
-    // Método para iniciar sesión con Google
+    // Login con google
     signInWithGoogle() {
         const provider = new GoogleAuthProvider();
         signInWithPopup(this.fireauth, provider)
@@ -66,7 +66,7 @@ export class AuthService {
             });
     }
 
-    // Método para cerrar sesión
+    // Logout
     logout() {
         this.fireauth.signOut()
             .then(() => {
