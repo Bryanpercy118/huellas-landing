@@ -9,6 +9,9 @@ import { LandingModule } from './features/landing/landing.module';
 
 import { environment } from '../enviroments/environment';
 import { PlatformModule } from './features/platform/platform.module';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 
 @NgModule({
@@ -25,7 +28,11 @@ import { PlatformModule } from './features/platform/platform.module';
    
     
   ],
-  providers: [],
+  providers: [
+    provideFirebaseApp(() => initializeApp({"projectId":"huellasdelmaestro-6cd9d","appId":"1:388946467613:web:14a2ea596db0bb8e2e1ff4","storageBucket":"huellasdelmaestro-6cd9d.appspot.com","apiKey":"AIzaSyBclSxE15myzQMUBBtCfgGf48UG-AI79ts","authDomain":"huellasdelmaestro-6cd9d.firebaseapp.com","messagingSenderId":"388946467613","measurementId":"G-GBWFBHHDQW"})),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
