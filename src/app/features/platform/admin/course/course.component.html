@@ -1,0 +1,52 @@
+<div class="p-6 bg-gray-100 min-h-screen">
+    <!-- Header con Filtros -->
+    <div class="flex justify-between items-center mb-6">
+      <div class="flex space-x-4">
+        <button class="px-4 py-2 bg-teal-500 text-white rounded-md font-semibold">Activo</button>
+        <button class="px-4 py-2 text-teal-500 rounded-md font-semibold">Caducado</button>
+      </div>
+      <div class="flex space-x-4">
+        <input type="text" placeholder="Buscar cursos" class="p-2 border border-gray-300 rounded-md">
+        <select class="p-2 border border-gray-300 rounded-md">
+          <option>Select a category</option>
+          <!-- Más opciones -->
+        </select>
+        <select class="p-2 border border-gray-300 rounded-md">
+          <option>Seleccione Estado del curso</option>
+          <!-- Más opciones -->
+        </select>
+      </div>
+    </div>
+  
+    <!-- Listado de Cursos -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Tarjeta de Curso -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="https://huellasdelmaestro.com/wp-content/uploads/2023/10/Banner-cursor-05-jpg.webp" alt="Course Image" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <span class="bg-teal-500 text-white px-3 py-1 rounded-full text-xs font-semibold">ACTIVO</span>
+          <h3 class="text-xl font-bold text-gray-800 mt-2">Puya: Déjala venir</h3>
+          <div class="flex items-center mt-2">
+            <img src="https://via.placeholder.com/40" class="w-8 h-8 rounded-full mr-2" alt="Instructor">
+            <p class="text-gray-600">COCHA MOLINA</p>
+            <span class="ml-auto text-gray-500">7 meses</span>
+          </div>
+          <div class="mt-4">
+            <div class="bg-gray-200 h-2 rounded-full">
+              <div class="bg-green-500 h-2 rounded-full" style="width: 100%;"></div>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <span class="text-sm text-gray-600">100% completado</span>
+              <a href="#" class="text-teal-500 text-sm font-semibold">View Course &rarr;</a>
+            </div>
+          </div>
+          <button class="w-full bg-teal-500 text-white py-2 rounded-md mt-4 font-semibold">CONTINUAR CURSO</button>
+        </div>
+      </div>
+  
+      <!-- Repite la estructura de la tarjeta de curso para los demás cursos -->
+      <!-- ... -->
+  
+    </div>
+  </div>
+  

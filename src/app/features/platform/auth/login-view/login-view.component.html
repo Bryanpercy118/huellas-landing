@@ -1,37 +1,61 @@
-<div class="flex items-center justify-center min-h-screen bg-gray-100">
-    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Iniciar Sesión</h2>
-
-        <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="space-y-4">
-            <div>
-                <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
-                <input type="email" id="email" name="email" [(ngModel)]="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
-            </div>
-
-            <div>
-                <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
-                <input type="password" id="password" name="password" [(ngModel)]="password" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
-            </div>
-
-            <button type="submit" [disabled]="loginForm.invalid" class="w-full py-2 px-4 bg-blue-500 text-white rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Iniciar Sesión</button>
-        </form>
-
-        <div class="relative my-6">
-            <div class="absolute inset-0 flex items-center">
-                <div class="w-full border-t border-gray-300"></div>
-            </div>
-            <div class="relative flex justify-center text-sm">
-                <span class="px-2 bg-white text-gray-500">O</span>
-            </div>
-        </div>
-
-        <button (click)="loginWithGoogle()" class="w-full py-2 px-4 bg-red-500 text-white rounded-md shadow-sm hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
-            Iniciar sesión con Google
-        </button>
-
-        <div class="mt-6 text-center">
-            <span class="text-sm text-gray-600">¿No tienes una cuenta? </span>
-            <a routerLink="/Platform/register" class="text-sm text-blue-500 hover:underline">Regístrate</a>
-        </div>
+<div class="min-h-screen flex">
+    <!-- Imagen de fondo -->
+    <div class="hidden lg:flex w-1/2 bg-cover bg-center"
+      style="background-image: url('https://images.unsplash.com/photo-1546514714-df0ccc50d7bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80');">
     </div>
-</div>
+  
+    <!-- Sección del formulario -->
+    <div class="flex w-full lg:w-1/2 justify-center items-center bg-white p-8">
+      <div class="w-full max-w-md">
+        <div class="text-center mb-6">
+          <div class="inline-block  rounded-full">
+            <img class="ml-4" src="https://huellasdelmaestro.com/wp-content/uploads/2022/06/logo-1.png" width="180" height="180" alt="Logo Huellas del Maestro">
+    
+          </div>
+          <h2 class="text-3xl font-bold text-gray-800 mt-4">Iniciar Sesión</h2>
+        </div>
+  
+        <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="space-y-6">
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+            <input type="email" id="email" name="email" [(ngModel)]="email" required
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm transition duration-300 ease-in-out">
+          </div>
+  
+          <div>
+            <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+            <input type="password" id="password" name="password" [(ngModel)]="password" required
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm transition duration-300 ease-in-out">
+          </div>
+  
+          <div class="flex items-center justify-between">
+            <a routerLink="/forgot-password" class="text-sm text-teal-500 hover:underline">¿Olvidaste tu contraseña?</a>
+          </div>
+  
+          <button type="submit" [disabled]="loginForm.invalid"
+            class="w-full py-2 px-4 bg-gradient-to-r from-blue-500 to-teal-400 text-white rounded-md shadow-md hover:bg-gradient-to-l focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition duration-300 ease-in-out">Iniciar
+            Sesión</button>
+        </form>
+  
+        <div class="relative my-8">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-gray-300"></div>
+          </div>
+          <div class="relative flex justify-center text-sm">
+            <span class="px-2 bg-white text-gray-500">O</span>
+          </div>
+        </div>
+  
+        <button routerLink="/Huellas-del-Maestro/home"
+          class="w-full py-2 px-4 bg-red-600 text-white rounded-md shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-300 ease-in-out">
+          Volver a la página principal
+        </button>
+  
+        <div class="mt-8 text-center">
+          <span class="text-sm text-gray-600">¿No tienes una cuenta?</span>
+          <a routerLink="/Platform/register" class="text-sm text-teal-500 hover:underline">Contacta a un asesor</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

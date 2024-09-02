@@ -14,11 +14,16 @@ import { ContactsComponent } from './components/Contact/contacts/contacts.compon
 import { FundationComponent } from './components/Fundacion/fundation/fundation.component';
 import { MuseoComponent } from './components/Museo/museo/museo.component';
 import { AcordeonModelComponent } from './components/Museo/components/acordeon-model/acordeon-model.component';
+import { LayoutComponent } from './shared/layout/layout.component';
+import { HeaderComponent } from './components/home/header/header.component';
+import { FooterComponent } from './components/home/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     LandingPageComponent,
+    HeaderComponent,
+    FooterComponent,
     HeroComponent,
     AboutComponent,
     NewsComponent,
@@ -28,7 +33,8 @@ import { AcordeonModelComponent } from './components/Museo/components/acordeon-m
     ContactsComponent,
     FundationComponent,
     MuseoComponent,
-    AcordeonModelComponent
+    AcordeonModelComponent,
+    LayoutComponent
   ],
   imports: [
     CommonModule,

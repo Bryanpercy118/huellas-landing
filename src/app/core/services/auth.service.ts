@@ -15,7 +15,7 @@ export class AuthService {
             .then((userCredential) => {
                 console.log('User signed in successfully');
                 localStorage.setItem('token', 'true');
-                this.router.navigate(['/Platform/dashboard']);
+                this.router.navigate(['/Platform/Huellas-del-Maestro']);
             })
             .catch((error) => {
                 alert('Algo no funciono como esperábamos');
@@ -29,7 +29,7 @@ export class AuthService {
             .then((userCredential) => {
                 console.log('User registered successfully');
                 localStorage.setItem('token', 'true');
-                this.router.navigate(['/Platform/dashboard']);
+                this.router.navigate(['/Platform/Huellas-del-Maestro']);
             })
             .catch((error) => {
                 alert('Error al registrar. Inténtalo de nuevo.');
@@ -43,7 +43,7 @@ export class AuthService {
           .then((result) => {
             console.log('User registered/logged in with Google successfully');
             localStorage.setItem('token', 'true');
-            this.router.navigate(['/Platform/dashboard']);
+            this.router.navigate(['/Platform/Huellas-del-Maestro']);
           })
           .catch((error) => {
             alert('Algo no funciono como esperabamos');
@@ -58,7 +58,7 @@ export class AuthService {
             .then((result) => {
                 console.log('User signed in with Google');
                 localStorage.setItem('token', 'true');
-                this.router.navigate(['/platform/dashboard']);
+                this.router.navigate(['/platform/Huellas-del-Maestro']);
             })
             .catch((error) => {
                 alert('Error al iniciar sesión con Google.');
@@ -71,7 +71,7 @@ export class AuthService {
         this.fireauth.signOut()
             .then(() => {
                 localStorage.removeItem('token');
-                this.router.navigate(['/login']);
+                this.router.navigate(['/Huellas-del-Maestro/home']);
             })
             .catch((error) => {
                 alert('Error al cerrar sesión.');

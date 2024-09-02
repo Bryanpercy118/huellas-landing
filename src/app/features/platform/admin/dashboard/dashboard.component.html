@@ -1,0 +1,36 @@
+<div class="flex h-screen bg-gray-100">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-lg">
+        <div class="px-6 py-4">
+          <h2 class="text-xl font-semibold text-blue-500">Huellas del Maestro</h2>
+        </div>
+        <nav class="mt-10 px-6 space-y-4">
+          <a routerLink="home" routerLinkActive="bg-blue-500 text-white" class="flex items-center text-gray-700 p-2 rounded-md hover:bg-blue-500 hover:text-white transition">
+            <span class="ml-4">🛠️ Panel de Control</span>
+          </a>
+          <a routerLink="courses" routerLinkActive="bg-blue-500 text-white" class="flex items-center text-gray-700 p-2 rounded-md hover:bg-blue-500 hover:text-white transition">
+            <span class="ml-4">📚 Mis Cursos</span>
+          </a>
+          <a routerLink="profile" routerLinkActive="bg-blue-500 text-white" class="flex items-center text-gray-700 p-2 rounded-md hover:bg-blue-500 hover:text-white transition">
+            <span class="ml-4">👤 Perfil</span>
+          </a>
+        </nav>
+    </aside>
+      
+  
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col overflow-hidden">
+        <!-- Navbar -->
+        <header class="bg-white shadow py-4 px-6 flex justify-between items-center">
+          <h1 class="text-2xl font-semibold text-gray-800">Bienvenido, Alumno</h1>
+          <button (click)="onLogout()" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Cerrar Sesión</button>
+        </header>
+      
+        <!-- Dashboard Content -->
+        <main class="flex-1 p-6 bg-gray-100">
+            <router-outlet></router-outlet>
+        </main>
+      </div>
+      
+  </div>
+  

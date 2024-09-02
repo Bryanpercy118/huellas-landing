@@ -18,8 +18,8 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
+ 
+   
   ],
   imports: [
     BrowserModule,

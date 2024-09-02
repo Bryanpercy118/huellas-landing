@@ -3,6 +3,7 @@ import { LoginViewComponent } from './auth/login-view/login-view.component';
 import { RegisterViewComponent } from './auth/register-view/register-view.component';
 import { PlatformRoutingModule } from "./platform-routing.module";
 import { FormsModule } from "@angular/forms";
+import { HomeComponent } from "./admin/home/home.component";
 
 
 @NgModule({

@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/Huellas-del-Maestro/home', pathMatch: 'full' },
   {
     path: 'Huellas-del-Maestro',
-    loadChildren: () => import('../app/features/landing/landing.module').then(m => m.LandingModule)
+    loadChildren: () => import('./features/landing/landing-routing.module').then(m => m.LandingRoutingModule)
   },
   {
     path: 'Platform',
